@@ -32,12 +32,13 @@ public class AuthController {
                 .body(new ApiResponse<>(401, "Credenciais inválidas", null));
     }
 
-    @PostMapping("/register")
+    //Usado somente para criar o primeiro usuário em caráter de teste
+   /*@PostMapping("/register")
     public ResponseEntity<ApiResponse<String>> register(@RequestBody RegisterDTO dto) {
         service.register(dto.email(), dto.password(), dto.userId());
 
         return ResponseEntity.ok(
                 new ApiResponse<>(200, "Usuário registrado com sucesso.", null)
         );
-    }
+    }*/
 }

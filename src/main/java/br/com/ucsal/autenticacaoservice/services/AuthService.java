@@ -23,12 +23,12 @@ public class AuthService {
        return BCrypt.checkpw(password, cred.getPasswordHash());
     }
 
-    public void register(String email, String rawPassword, Long userId) {
+    /*public void register(String email, String rawPassword, Long userId) {
        String hashed = BCrypt.hashpw(rawPassword, BCrypt.gensalt());
         Credential cred = new Credential();
         cred.setEmail(email);
         cred.setPasswordHash(hashed);
         cred.setUserId(userId);
         repository.save(cred);
-    }
+    }*/
 }
